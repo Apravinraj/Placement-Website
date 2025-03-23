@@ -73,7 +73,7 @@ const AdminLogin = () => {
             Student Login
           </a>
         </p>
-        <button className="go-back-button" onClick={() => navigate("/Placement-Website")}>
+        <button className="go-back-button" onClick={() => navigate("/")}>
           ← Go Back to Home
         </button>
         </form>

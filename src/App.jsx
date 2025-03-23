@@ -14,7 +14,7 @@ function App() {
       
       
           <Routes>
-              <Route path = "/Placement-Website" element={<Dashboard/>}/>
+              <Route path = "/" element={<Dashboard/>}/>
               <Route path = "/Placement-Website/Login" element={<Login/>}/>
               <Route path = "/Placement-Website/postJD" element={<PostJD/>}/>
               {/* <Route path = "/Placement-Website/dashboard" element={<Dashboard/>}/> */}

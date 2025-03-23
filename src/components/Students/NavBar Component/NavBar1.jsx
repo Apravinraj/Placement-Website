@@ -26,7 +26,7 @@ const NavBar1 = ({ onSearch }) => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto">
-            <Nav.Link href="/Placement-Website" className={location.pathname === "/Placement-Website/dashboard" ? "active-link" : ""}>
+            <Nav.Link href="/" className={location.pathname === "/Placement-Website/dashboard" ? "active-link" : ""}>
               Home
             </Nav.Link>
             <Nav.Link href="/Placement-Website/adminLogin" className={location.pathname === "/Placement-Website/adminLogin" ? "active-link" : ""}>
