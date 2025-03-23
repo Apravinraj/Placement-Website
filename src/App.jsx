@@ -14,12 +14,12 @@ function App() {
       
       
           <Routes>
-              <Route path = "/login" element={<Login/>}/>
-              <Route path = "/postJD" element={<PostJD/>}/>
-              <Route path = "/dashboard" element={<Dashboard/>}/>
-              <Route path = "/details" element={<Detail/>}/>
-              <Route path = "/adminLogin" element={<AdminLogin/>}/>
-              <Route path = "/job-description" element={<JobDescription/>}/>
+              <Route path = "/Placement-Website" element={<Dashboard/>}/>
+              <Route path = "/Placement-Website/Login" element={<Login/>}/>
+              <Route path = "/Placement-Website/postJD" element={<PostJD/>}/>
+              <Route path = "/Placement-Website/dashboard" element={<Dashboard/>}/>
+              <Route path = "/Placement-Website/adminLogin" element={<AdminLogin/>}/>
+              <Route path = "/Placement-Website/job-description" element={<JobDescription/>}/>
 
           </Routes>
       </BrowserRouter>

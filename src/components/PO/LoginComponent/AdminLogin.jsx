@@ -22,7 +22,7 @@ const AdminLogin = () => {
     ) {
       localStorage.setItem("isAdmin", "true");
       alert("Admin Login Successful");
-      navigate("/dashboard");
+      navigate("/Placement-Website/dashboard");
     } else {
       alert("Invalid credentials");
     }    console.log("Submitted:", { email, password });
@@ -69,11 +69,11 @@ const AdminLogin = () => {
           </button>
           <p className="signup-prompt">
           Are you a Student?{" "}
-          <a href="/Login" className="signup-link">
+          <a href="/Placement-Website/Login" className="signup-link">
             Student Login
           </a>
         </p>
-        <button className="go-back-button" onClick={() => navigate("/dashboard")}>
+        <button className="go-back-button" onClick={() => navigate("/Placement-Website/dashboard")}>
           ← Go Back to Home
         </button>
         </form>

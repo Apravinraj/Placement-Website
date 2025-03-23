@@ -26,14 +26,14 @@ const NavBar1 = ({ onSearch }) => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto">
-            <Nav.Link href="/dashboard" className={location.pathname === "/dashboard" ? "active-link" : ""}>
+            <Nav.Link href="/Placement-Website/dashboard" className={location.pathname === "/Placement-Website/dashboard" ? "active-link" : ""}>
               Home
             </Nav.Link>
-            <Nav.Link href="/adminLogin" className={location.pathname === "/adminLogin" ? "active-link" : ""}>
+            <Nav.Link href="/Placement-Website/adminLogin" className={location.pathname === "/Placement-Website/adminLogin" ? "active-link" : ""}>
               PO Login
             </Nav.Link>
             {isAdmin ? (
-              <Nav.Link href="/postJD" className={location.pathname === "/postJD" ? "active-link" : ""}>
+              <Nav.Link href="/Placement-Website/postJD" className={location.pathname === "/Placement-Website/postJD" ? "active-link" : ""}>
                 Add New Post
               </Nav.Link>
             ) : (

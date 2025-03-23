@@ -30,13 +30,13 @@ const Login = () => {
 
         <p className="signup-prompt">
           Are you an Admin?{" "}
-          <a href="/AdminLogin" className="signup-link">
+          <a href="/Placement-Website/AdminLogin" className="signup-link">
             Admin login
           </a>
         </p>
 
         {/* ✅ Go Back to Home Button */}
-        <button className="go-back-button" onClick={() => navigate("/dashboard")}>
+        <button className="go-back-button" onClick={() => navigate("/Placement-Website/dashboard")}>
           ← Go Back to Home
         </button>
       </div>

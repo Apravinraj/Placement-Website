@@ -18,7 +18,7 @@ function Home() {
   }, []);
 
   const handleApply = (job) => {
-    navigate("/job-description", { state: { job } });
+    navigate("/Placement-Website/job-description", { state: { job } });
   };
 
   const handleSearch = (query) => {
