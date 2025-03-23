@@ -1,0 +1,50 @@
+.card {
+  background-color: hsl(106, 95%, 76%);
+  border: 1px solid #e0e0e0;
+  margin: 5% 25%;
+}
+
+.form-label {
+  font-weight: 500;
+  color: black;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+}
+
+button[type="submit"] {
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+h1{
+    text-align: center;
+}
+
+.p-4.shadow-sm.rounded-3.card.ai-style-change-1 {
+  margin: 5%; /* Replace 10% with your desired margin value */
+}
+
+.job-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+}
+
+.job-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
