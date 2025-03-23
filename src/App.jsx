@@ -17,7 +17,7 @@ function App() {
               <Route path = "/Placement-Website" element={<Dashboard/>}/>
               <Route path = "/Placement-Website/Login" element={<Login/>}/>
               <Route path = "/Placement-Website/postJD" element={<PostJD/>}/>
-              <Route path = "/Placement-Website/dashboard" element={<Dashboard/>}/>
+              {/* <Route path = "/Placement-Website/dashboard" element={<Dashboard/>}/> */}
               <Route path = "/Placement-Website/adminLogin" element={<AdminLogin/>}/>
               <Route path = "/Placement-Website/job-description" element={<JobDescription/>}/>
 

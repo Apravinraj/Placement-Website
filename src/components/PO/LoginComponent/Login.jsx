@@ -36,7 +36,7 @@ const Login = () => {
         </p>
 
         {/* ✅ Go Back to Home Button */}
-        <button className="go-back-button" onClick={() => navigate("/Placement-Website/dashboard")}>
+        <button className="go-back-button" onClick={() => navigate("/Placement-Website")}>
           ← Go Back to Home
         </button>
       </div>
