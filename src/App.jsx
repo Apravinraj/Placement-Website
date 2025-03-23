@@ -1,7 +1,6 @@
 import  Login from "./components/PO/LoginComponent/Login"
 import Dashboard from "./components/Students/DashBoardComponents/Dashboard"
 import PostJD from "./components/PO/PostJDComponent/PostJD"
-import Detail from "./components/Students/Detail"
 import {BrowserRouter,Routes,Route, Link, Links} from "react-router-dom"
 import AdminLogin from "./components/PO/LoginComponent/AdminLogin"
 import JobDescription from "./components/Students/DashBoardComponents/JobDescription"

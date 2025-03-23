@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar1 from "../NavBar Component/NavBar1";
 import { Card, Button, Row, Col } from "react-bootstrap";
-import "./Dashboard.css";
 
 function Home() {
   const [data, setData] = useState([]);

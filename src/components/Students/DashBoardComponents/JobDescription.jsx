@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import NavBar1 from "../NavBar Component/NavBar1";
-import "./Dashboard.css";
+
 
 function JobDescription() {
   const location = useLocation();
