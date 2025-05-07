@@ -1,0 +1,188 @@
+/* Navbar Base Styling */
+.custom-navbar {
+  background-color: #2A004E;
+  transition: background-color 0.3s ease-in-out;
+  padding: 10px 20px;
+}
+
+.custom-navbar .nav-brand {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Menu Items - White Color */
+.custom-navbar .nav-link {
+  color: white !important; /* Force white color */
+  font-size: 1.1rem;
+  margin-right: 20px;
+  padding: 8px 12px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect - Orange */
+.custom-navbar .nav-link:hover {
+  color: #FFA500 !important;
+  transform: scale(1.05);
+}
+
+/* Active Link - Orange */
+.custom-navbar .active-link {
+  color: #FFA500 !important;
+  font-weight: bold;
+}
+
+/* Underline Animation for Active Link */
+.custom-navbar .active-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #FFA500;
+  border-radius: 2px;
+  animation: slide-in 0.3s ease-in-out forwards;
+  
+}
+
+@keyframes slide-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Search Input Styling */
+.search-input {
+  border-radius: 20px;
+  padding: 8px 15px;
+  border: 2px solid #FFA500;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #ccc;
+}
+
+.search-input:focus {
+  border-color: white;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+  outline: none;
+}
+
+/* Profile Toggle Styling */
+.profile-toggle, .profile-toggle-mobile {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.profile-toggle:after, .profile-toggle-mobile:after {
+  display: none !important;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu-desktop, .dropdown-menu-mobile {
+  background-color: #3a005e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu-desktop .dropdown-item, 
+.dropdown-menu-mobile .dropdown-item {
+  color: white !important;
+  padding: 10px 15px;
+}
+
+.dropdown-menu-desktop .dropdown-item:hover, 
+.dropdown-menu-mobile .dropdown-item:hover {
+  background-color: rgba(255, 165, 0, 0.2) !important;
+}
+
+.dropdown-divider {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+  .custom-navbar {
+    padding: 10px 15px;
+  }
+  
+  .custom-navbar .nav-brand {
+    font-size: 1.4rem;
+  }
+  
+  /* Make hamburger menu icon white */
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+  /* .navbar-toggler-custom {
+    border: none;
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+  }
+  
+  .navbar-toggler-icon-custom {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");      background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: #ccc !important;
+  } */
+  
+  .custom-navbar .nav-link {
+    margin-right: 0;
+    padding: 10px 15px;
+    display: block;
+    text-align: center;
+    color: white !important; 
+  }
+  
+  .custom-navbar .active-link::after {
+    display: none;
+    
+  }
+  
+  .custom-navbar .active-link {
+    background-color: rgba(255, 165, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .search-input {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .dropdown-menu-mobile {
+    position: static !important;
+    transform: none !important;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  /* Mobile profile toggle specific styles */
+  .profile-toggle-mobile img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .custom-navbar .nav-brand {
+    font-size: 1.2rem;
+  }
+}

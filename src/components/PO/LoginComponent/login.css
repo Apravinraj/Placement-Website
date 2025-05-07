@@ -227,3 +227,74 @@
     transform: scale(1.05);
   }
   
+
+  @media (max-width: 1024px) {
+    .login-container {
+      width: 60%;
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      width: 80%;
+      padding: 1.5rem;
+    }
+  
+    .form-title {
+      font-size: 1.25rem;
+    }
+  
+    .login-form .input-field {
+      font-size: 1rem;
+      padding: 0px 1rem 0 2.5rem;
+    }
+  
+    .login-form .login-button {
+      font-size: 1rem;
+    }
+  
+    .go-back-button {
+      font-size: 0.95rem;
+    }
+  
+    .login-container .signup-prompt {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-container {
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    .form-title {
+      font-size: 1.1rem;
+    }
+  
+    .login-form .input-wrapper {
+      height: 48px;
+      margin-bottom: 1.25rem;
+    }
+  
+    .login-form .input-field {
+      padding-left: 2.2rem;
+      font-size: 0.95rem;
+    }
+  
+    .login-form .login-button,
+    .go-back-button {
+      height: 48px;
+      font-size: 0.9rem;
+    }
+  
+    .input-icon {
+      font-size: 0.9rem;
+    }
+  
+    .login-container .separator span {
+      font-size: 0.95rem;
+    }
+  }
+  

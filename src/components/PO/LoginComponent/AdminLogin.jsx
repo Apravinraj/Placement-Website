@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SocialLogin from "./SocialLogin";
 import "./login.css";
-import { useNavigate } from "react-router-dom";
-const AdminLogin = () => {
 
+const AdminLogin = () => {
   const navigate = useNavigate();
 
   const ADMIN_CREDENTIALS = {
@@ -13,19 +13,27 @@ const AdminLogin = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError(""); // Clear previous errors
+    
+    if (!email || !password) {
+      setError("Please fill in all fields");
+      return;
+    }
+
     if (
       email.trim().toLowerCase() === ADMIN_CREDENTIALS.email.toLowerCase() &&
       password.trim() === ADMIN_CREDENTIALS.password
     ) {
       localStorage.setItem("isAdmin", "true");
-      alert("Admin Login Successful");
-      navigate("/Placement-Website/dashboard");
+      localStorage.setItem("adminAuthenticated", "true");
+      navigate("/dashboard"); // Use navigate instead of href
     } else {
-      alert("Invalid credentials");
-    }    console.log("Submitted:", { email, password });
+      setError("Invalid admin credentials");
+    }
   };
 
   return (
@@ -36,6 +44,9 @@ const AdminLogin = () => {
         <p className="separator">
           <span>or</span>
         </p>
+        
+        {error && <div className="alert alert-danger">{error}</div>}
+        
         <form onSubmit={handleSubmit} className="login-form">
           <div className="input-wrapper">
             <input
@@ -46,7 +57,6 @@ const AdminLogin = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            {/* You can add an icon here if needed */}
             <i className="input-icon fa fa-envelope"></i>
           </div>
           <div className="input-wrapper">
@@ -58,24 +68,31 @@ const AdminLogin = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            {/* You can add an icon here if needed */}
             <i className="input-icon fa fa-lock"></i>
           </div>
-          <a href="#" className="forgot-password-link">
-            Forgot password?
-          </a>
+          
           <button type="submit" className="login-button">
             Log In
           </button>
-          <p className="signup-prompt">
-          Are you a Student?{" "}
-          <a href="/Placement-Website/Login" className="signup-link">
-            Student Login
-          </a>
-        </p>
-        <button className="go-back-button" onClick={() => navigate("/Placement-Website")}>
-          ← Go Back to Home
-        </button>
+          
+          <div className="login-links">
+            <p className="signup-prompt">
+              Are you a Student?{" "}
+              <span 
+                className="signup-link" 
+                onClick={() => navigate("/login")}
+                style={{ cursor: "pointer" }}
+              >
+                Student Login
+              </span>
+            </p>
+            <button 
+              className="go-back-button" 
+              onClick={() => navigate("/dashboard")}
+            >
+              ← Go Back to Home
+            </button>
+          </div>
         </form>
       </div>
     </div>

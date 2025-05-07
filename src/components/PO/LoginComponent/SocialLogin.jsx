@@ -1,12 +1,16 @@
+import google1 from "../../../assets/google.svg";
+import github from "../../../assets/github.svg";
+
+
 const SocialLogin = () => {
     return (
       <div className="social-login">
         <button className="social-button">
-          <img src="src/assets/google.svg" alt="Google" className="social-icon" />
+          <img src={google1} alt="Google" className="social-icon" />
           Google
         </button>
         <button className="social-button">
-          <img src="src/assets/github.svg" alt="Apple" className="social-icon" />
+          <img src={github} alt="Apple" className="social-icon" />
           Github
         </button>
       </div>
